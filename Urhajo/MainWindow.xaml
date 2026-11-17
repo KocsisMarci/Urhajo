@@ -42,6 +42,6 @@
             <Button Content="Keresés név szerint"></Button>
             <TextBox></TextBox>
         </StackPanel>
-        <DataGrid x:Name="datagrid"></DataGrid>
+        <DataGrid Grid.Column="1" x:Name="datagrid"></DataGrid>
     </Grid>
 </Window>
