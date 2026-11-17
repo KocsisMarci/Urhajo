@@ -11,6 +11,11 @@
             <Setter Property="Width" Value="200"></Setter>
             <Setter Property="Height" Value="25"></Setter>
             <Setter Property="Margin" Value="0 5"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
         <Style TargetType="TextBox">
@@ -40,9 +45,11 @@
             <Button Content="Átlagos legénységszám" Click="Button_Click_4"></Button>
             <Button Content="Gyártók szerinti csoportosítás" Click="Button_Click_5"></Button>
             <Button Content="Keresés név szerint" Click="Button_Click_6"></Button>
-            <TextBox></TextBox>
-            <ProgressBar></ProgressBar>
+            <TextBox x:Name="keresett"></TextBox>
+            <ProgressBar x:Name="progress" Minimum="1" Maximum="100"></ProgressBar>
         </StackPanel>
-        <DataGrid Grid.Column="1" x:Name="dataGrid"></DataGrid>
+        <DataGrid Grid.Column="1" x:Name="dataGrid" SelectionChanged="valtva">
+            
+        </DataGrid>
     </Grid>
 </Window>
